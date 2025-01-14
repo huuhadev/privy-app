@@ -8,6 +8,7 @@ const client = new PrivyClient(PRIVY_APP_ID!, PRIVY_APP_SECRET!);
 
 export type AuthenticateSuccessResponse = {
   claims: AuthTokenClaims;
+  token: string
 };
 
 export type AuthenticationErrorResponse = {
@@ -28,7 +29,7 @@ async function handler(
 
   try {
     const claims = await client.verifyAuthToken(authToken);
-    return res.status(200).json({ claims });
+    return res.status(200).json({ token: authToken, claims });
   } catch (e: any) {
     return res.status(401).json({ error: e.message });
   }
