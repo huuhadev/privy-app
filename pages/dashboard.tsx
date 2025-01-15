@@ -203,7 +203,7 @@ export default function DashboardPage() {
                   <summary className="mt-6 font-bold uppercase text-sm text-gray-600">
                     Server verify result
                   </summary>
-                  <pre className="max-w-4xl bg-slate-700 text-slate-50 font-mono p-4 text-xs sm:text-sm rounded-md mt-2 break-words">
+                  <pre className="max-w-4xl bg-slate-700 text-slate-50 font-mono p-4 text-xs sm:text-sm rounded-md mt-2 break-all break-words whitespace-pre-wrap">
                     {JSON.stringify(verifyResult, null, 2)}
                   </pre>
                 </details>
