@@ -17,7 +17,7 @@ async function verifyToken() {
 }
 async function verifyTokenBackend() {
   const accessToken = await getAccessToken();
-  const result = await fetch(`${process.env.BACKEND_APP_URL}/auth/verify-token?${accessToken}`, {
+  const result = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_APP_URL}/auth/verify-token?${accessToken}`, {
     headers: {
       'accept': 'application/json'
     },
